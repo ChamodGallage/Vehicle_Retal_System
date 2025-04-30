@@ -57,9 +57,9 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   // Validate password
-  if (password.length < 6) {
+  if (password.length < 8) {
     res.status(400);
-    throw new Error("Password must be at least 6 characters long");
+    throw new Error("Password must be at least 8 characters long");
   }
 
   // Validate contact
@@ -157,9 +157,9 @@ const updateUserProfile = asyncHandler(async (req, res) => {
   }
 
   // Validate password
-  if (password.length <= 6) {
+  if (password.length <= 8) {
     res.status(400);
-    throw new Error("Password must be at least 6 characters long");
+    throw new Error("Password must be at least 8 characters long");
   }
 
   // Validate if the user already registered
